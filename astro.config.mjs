@@ -11,9 +11,9 @@ export default defineConfig({
       favicon: "/public/shion.ico",
       title: "PHXNTXM",
       logo: {
-        src: "/public/shion.ico",
+        src: "/src/assets/shion.webp",
       },
-      customCss: ['./src/styles/custom.css'],
+      customCss: ["./src/styles/custom.css"],
       social: [
         {
           icon: "github",
@@ -25,6 +25,26 @@ export default defineConfig({
         {
           label: "Sistemas de estudio",
           autogenerate: { directory: "sistemasestudio" },
+        },
+        {
+          label: "Inglés",
+          autogenerate: { directory: "ingles" },
+        },
+        {
+          label: "Análisis de Datos",
+          autogenerate: { directory: "analisis_de_datos" },
+        },
+        {
+          label: "Excel",
+          autogenerate: { directory: "excel" },
+        },
+        {
+          label: "OverTheWire",
+          autogenerate: { directory: "overthewire" },
+        },
+        {
+          label: "Lógica de programación",
+          autogenerate: { directory: "logica_programacion" },
         },
       ],
     }),
