@@ -1,0 +1,70 @@
+---
+title: PSeint
+---
+
+## Variables y tipos de datos
+
+```
+Algoritmo variables
+
+	// Declarar variable
+
+	Definir mi_numero Como Entero
+
+    // Asignar un valor
+
+    mi_numero = 12
+
+    // Imprimimos la variable
+
+    Imprimir "mi numero es: ", mi_numero
+
+FinAlgoritmo
+```
+
+las variables de un mismo tipo de dato se pueden declarar en la misma línea, separadas por comas:
+
+`Definir mi_numero, otro_numero Como Entero`
+
+en las variables cuando se cambia de valor, el nuevo valor reemplaza al anterior, es decir, el valor anterior se pierde.
+
+cuando el valor de la variable se asigna desde el código se le llama código duro.
+
+En vez de eso le podemos pedir al usuario que ingrese un valor dinamicamente, para eso se usa el comando `Leer`:
+
+```
+
+Algoritmo variables
+
+    // Declarar variable
+
+    Definir nombre Como Caracter
+
+    // indicamos al usuario que proporcione la información
+
+    Imprimir "Proporciona tu nombre:"
+
+    // leemos e imprimimos la información del usuario
+
+    Leer nombre
+
+    Imprimir "Tu nombre es: ", nombre
+
+FinAlgoritmo
+
+```
+
+Reglas de nombres de variables:
+
+- `mi_variable` - snake case
+- `miVariable` - camel case
+- `MiVariable` - pascal case
+
+En varios lenguajes de programación se diferencian las variables por mayúsculas y minúsculas, es decir, `mi_variable` y `Mi_variable` son variables diferentes, pero en PSeint no es así, ambas variables se consideran iguales.
+
+Algunos errores al declarar variables:
+
+- Iniciar el nombre de la variable con un número.
+- Usar caracteres especiales como `!`, `@`, `#`, etc.
+- Usar palabras reservadas del lenguaje.
+- Usar espacios en el nombre de la variable.

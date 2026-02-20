@@ -2,6 +2,8 @@
 title: Analista de Datos Asociado SQL
 ---
 
+import { Aside } from "@astrojs/starlight/components";
+
 ## Introducción a SQL
 
 (Structured Query Language)
@@ -14,10 +16,83 @@ Una base de datos es un sistema de gestión de datos que nos permite:
 - manipular datos
 
 En una base de datos relacional los datos se organizan en tablas, cada tabla representa un tipo de específico de entidad o evento
-por ejemplo:<br />
-`products - para un producto de comercio electrónico`<br />
-`customers - para los usuarios registrados`<br />
+por ejemplo:
+
+`products - para un producto de comercio electrónico`
+
+`customers - para los usuarios registrados`
+
 `orders - para las compras de clientes`
 
 Las tablas están compuestas por filas y columnas, en cada fila representa una entidad o evento único y contiene toda la información de esa entidad, cada columna representa un atributo o propiedad específica de la entidad o evento que representa la tabla y tiene un nombre descriptivo.
 Una columna se conoce también como campo o atributo.
+
+## Primeras consultas SQL
+
+```sql
+SELECT *
+FROM products;
+```
+
+Nos mostrará todos los datos disponibles de la tabla de productos.
+
+El conjunto completo de codigo se llama consulta SQL. <br />
+Los comandos como SELECT y FROM se conocen como SQL keywords.
+
+Al ejecutar:
+
+```sql
+SELECT name
+FROM products;
+```
+
+Nos da solo la colúmna name de la tabla products.
+
+Si necesitamos consultar más columnas se separa por comas y saltos de línea para mejorar la legibilidad, ademas de que es una buena práctica (se puede hacer la consulta en la misma línea pero no es recomendable)
+
+```sql
+SELECT id,
+       name,
+       rating
+FROM products;
+```
+
+Las consultas deben ser precisas o dara un error.
+
+Para ordenar la tabla podemos decirle desde el código que lo ordene:
+
+```sql
+SELECT id,
+       name,
+       rating
+FROM products
+ORDER BY rating;
+```
+
+Lo regresa ordenado de menor a mayor.
+
+Y para mostrarlo de mayor a menor (orden descendente) se agrega DESC al final:
+
+```sql
+SELECT id,
+       name,
+       rating
+FROM products
+ORDER BY rating DESC;
+```
+
+si queremos que solo nos muestre un número específico de resultados, podemos darle un límite a la consulta, en este caso queremos los primeros 10 en orden descendente:
+
+```sql
+SELECT id,
+       name,
+       rating
+FROM products
+ORDER BY rating DESC
+LIMIT 10;
+```
+
+<Aside type="caution">
+  Los resultados de las consultas son una copia temporal que no se guardan a
+  menos que se haga intencionalmente.
+</Aside>
